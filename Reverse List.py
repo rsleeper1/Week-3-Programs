@@ -2,9 +2,9 @@
 #Ryan Sleeper
 #This program will reverse a list.
 
-def swapItem(item, list, itemCount):      #This method swaps items in a list.
-    if itemCount == len(list):            #This is my base case. My function will call itself until the itemCount is equal to the length of the list.
-        return list
+def swapItem(item, list, itemCount):      #This method swaps items in a list. It takes three parameters, an item, the list with the included items and 
+    if itemCount == len(list):            #an itemCount which keeps track of the number of items we have swapped in the list.
+        return list                       #This is my base case. My function will call itself until the itemCount is equal to the length of the list.
     else:
         list.insert(len(list) - itemCount, item)
         list.remove(item)

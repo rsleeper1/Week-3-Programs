@@ -2,9 +2,11 @@
 #Ryan Sleeper
 
 def findMaxAndMin(sequence):         #This method finds the max and min values of a sequence of numbers.
-    if len(sequence) < 2:            #This catches a sequence that doesn't have enough numbers to compare (less than 2).
+    if len(sequence) < 2:            #This catches a sequence that doesn't have enough numbers to compare (less than 2) and returns the invalid sequence.
         print("Please create a sequence of at least 2 numbers.")
-    
+        minNum = sequence
+        maxNum = sequence
+        return minNum, maxNum
     elif len(sequence) == 2:           #This is my base case. Once the sequence gets down to two numbers we have found the max and min.
         sequence.sort()
         return sequence[0], sequence[1]
